@@ -13,6 +13,7 @@ public class MyQueue implements Interface_Queue{
 
     @Override
     public Object leave(Queue queue) {
+
         return queue.poll(); //returns null if empty
     }
 
@@ -33,9 +34,5 @@ public class MyQueue implements Interface_Queue{
         queue.clear();
     }
 
-    public void printQueue(Queue queue){
-        for(Object elm : queue){
-            System.out.println(elm);
-        }
-    }
+
 }
