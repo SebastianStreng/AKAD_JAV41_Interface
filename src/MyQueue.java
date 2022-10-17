@@ -6,26 +6,28 @@ public class MyQueue implements Interface_Queue{
 
     @Override
     public void enter(Object elm, Queue queue) {
-
+        queue.add(elm);
     }
 
     @Override
     public Object leave(Queue queue) {
-        return null;
+        return queue.poll(); //returns null if empty
     }
 
     @Override
     public boolean isEmpty(Queue queue) {
-        return false;
+        if (queue.isEmpty()){
+            return true;
+        } return false;
     }
 
     @Override
     public int size(Queue queue) {
-        return 0;
+        return queue.size();
     }
 
     @Override
     public void clear(Queue queue) {
-
+        queue.clear();
     }
 }
