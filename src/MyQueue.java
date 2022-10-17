@@ -1,6 +1,8 @@
 import java.util.List;
 import java.util.Queue;
 
+import static java.lang.System.in;
+
 public class MyQueue implements Interface_Queue{
 
 
@@ -29,5 +31,11 @@ public class MyQueue implements Interface_Queue{
     @Override
     public void clear(Queue queue) {
         queue.clear();
+    }
+
+    public void printQueue(Queue queue){
+        for(Object elm : queue){
+            System.out.println(elm);
+        }
     }
 }
