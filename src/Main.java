@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 
 public class Main {
-    private static Interface_Queue IQueue;
+    //private static Interface_Queue IQueue ;
+    private static MyQueue myQueue = new MyQueue();
 
     public static void main(String[] args) {
 
@@ -29,29 +30,40 @@ public class Main {
                     System.out.println("Please write something down to add it in queue: ");
                     String input = scanner.next();
                     System.out.println("You have added " + input + " to the queue");
-                    IQueue.enter(input, queue);
+                    myQueue.enter(input, queue);
+                    break;
                 case 2:
-                    Object obj = IQueue.leave(queue);
+                    Object obj = myQueue.leave(queue);
                     if (obj != null) {
                         System.out.println(obj + " was removed.");
                     }
+                    else {
                     System.out.println("can´t remove anything if queue is empty.");
+                    }
+                    break;
                 case 3:
-                    boolean bool = IQueue.isEmpty(queue);
+                    boolean bool = myQueue.isEmpty(queue);
                     if (bool == true) {
                         System.out.println("Queue is Empty");
                     }
+                    else {
                     System.out.println("Queue is not empty");
+                    }
+                    break;
                 case 4:
-                    int size = IQueue.size(queue);
+                    int size = myQueue.size(queue);
                     System.out.println("The Queue contains " + size + " elements.");
+                    break;
                 case 5:
-                    IQueue.clear(queue);
+                    myQueue.clear(queue);
                     System.out.println("The queue is now empty.");
+                    break;
                 case 6:
-                    printQueue(queue);
+                    myQueue.printQueue(queue);
+                    break;
                 case 7:
                     checker = false;
+                    break;
                 default:
                     System.out.println("No match found, please select a number between 1 and 5");
             }
@@ -59,9 +71,5 @@ public class Main {
 
     }
 
-    private static void printQueue(Queue queue){
-        for(Object elm : queue){
-            System.out.println(elm);
-        }
-    }
+
 }
