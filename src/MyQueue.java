@@ -15,17 +15,14 @@ public class MyQueue <E> implements Interface_Queue{
             System.out.println(o);
         }
     }
-
     @Override
     public void enter(Object elm) {
         queue.add((E)elm);
     }
-
     @Override
     public Object leave() {
         return queue.remove();
     }
-
     @Override
     public boolean isEmpty() {
         return queue.isEmpty();
