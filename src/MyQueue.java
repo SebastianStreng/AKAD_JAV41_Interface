@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static java.lang.System.in;
 
-public class MyQueue <E> implements java.util.Queue{
+public class MyQueue <E> implements Interface_Queue{
 
     Queue<E> queue = new ConcurrentLinkedQueue<>();
 
@@ -17,8 +17,13 @@ public class MyQueue <E> implements java.util.Queue{
     }
 
     @Override
-    public int size() {
-        return queue.size();
+    public void enter(Object elm) {
+        queue.add((E)elm);
+    }
+
+    @Override
+    public Object leave() {
+        return queue.remove();
     }
 
     @Override
@@ -27,82 +32,12 @@ public class MyQueue <E> implements java.util.Queue{
     }
 
     @Override
-    public boolean contains(Object o) {
-        return queue.contains(o);
-    }
-
-    @Override
-    public Iterator iterator() {
-        return queue.iterator();
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public Object[] toArray(Object[] a) {
-        return new Object[0];
-    }
-
-    @Override
-    public boolean add(Object o) {
-        return queue.add((E) o);
-    }
-
-    @Override
-    public boolean remove(Object o) {
-        return remove(o);
-    }
-
-    @Override
-    public boolean addAll(Collection c) {
-        return false;
+    public int size() {
+        return queue.size() ;
     }
 
     @Override
     public void clear() {
         queue.clear();
-    }
-
-    @Override
-    public boolean retainAll(Collection c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection c) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection c) {
-        return false;
-    }
-
-    @Override
-    public boolean offer(Object o) {
-        return false;
-    }
-
-    @Override
-    public Object remove() {
-        return null;
-    }
-
-    @Override
-    public Object poll() {
-        return null;
-    }
-
-    @Override
-    public Object element() {
-        return null;
-    }
-
-    @Override
-    public Object peek() {
-        return null;
     }
 }
