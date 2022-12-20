@@ -27,17 +27,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,6 +49,16 @@
       <workItem from="1665995175141" duration="14447000" />
       <workItem from="1666040360313" duration="626000" />
       <workItem from="1666352907209" duration="684000" />
+      <workItem from="1671099930344" duration="536000" />
+      <workItem from="1671103479303" duration="497000" />
+      <workItem from="1671112882165" duration="8000" />
+      <workItem from="1671112905684" duration="46000" />
+      <workItem from="1671189282621" duration="135000" />
+      <workItem from="1671193825699" duration="1868000" />
+      <workItem from="1671540063898" duration="2604000" />
+      <workItem from="1671555849004" duration="758000" />
+      <workItem from="1671556622681" duration="51000" />
+      <workItem from="1671556699457" duration="119000" />
     </task>
     <servers />
   </component>

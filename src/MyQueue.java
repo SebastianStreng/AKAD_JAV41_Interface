@@ -5,7 +5,6 @@ import static java.lang.System.in;
 
 public class MyQueue implements Interface_Queue{
 
-
     @Override
     public void enter(Object elm, Queue queue) {
         queue.add(elm);
