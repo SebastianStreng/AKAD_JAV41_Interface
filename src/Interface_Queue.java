@@ -3,6 +3,7 @@ import java.util.Queue;
 
 public interface Interface_Queue <E> {
 
+
     public void enter( E elm, Queue<Object> queue);
 
     public E leave (Queue<Object> queue);
