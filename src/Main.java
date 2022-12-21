@@ -12,7 +12,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         boolean checker = true;
-        Queue<Integer> queue = new ConcurrentLinkedQueue<>();
+
         do {
             System.out.println("Please choose one of the following operations by writing a number between 1 and 7:\n" +
                     "1.) add an item to the queue.\n" +
@@ -30,10 +30,10 @@ public class Main {
                     System.out.println("Please write something down to add it in queue: ");
                     String input = scanner.next();
                     System.out.println("You have added " + input + " to the queue");
-                    myQueue.enter(input, queue);
+                    myQueue.enter(input);
                     break;
                 case 2:
-                    Object obj = myQueue.leave(queue);
+                    Object obj = myQueue.leave();
                     if (obj != null) {
                         System.out.println(obj + " was removed.");
                     }
@@ -42,7 +42,7 @@ public class Main {
                     }
                     break;
                 case 3:
-                    boolean bool = myQueue.isEmpty(queue);
+                    boolean bool = myQueue.isEmpty();
                     if (bool == true) {
                         System.out.println("Queue is Empty");
                     }
@@ -51,21 +51,21 @@ public class Main {
                     }
                     break;
                 case 4:
-                    int size = myQueue.size(queue);
+                    int size = myQueue.size();
                     System.out.println("The Queue contains " + size + " elements.");
                     break;
                 case 5:
-                    myQueue.clear(queue);
+                    myQueue.clear();
                     System.out.println("The queue is now empty.");
                     break;
                 case 6:
-                    myQueue.printQueue(queue);
+                    myQueue.printQueue();
                     break;
                 case 7:
                     checker = false;
                     break;
                 default:
-                    System.out.println("No match found, please select a number between 1 and 5");
+                    System.out.println("No match found, please select a number between 1 and 7");
             }
         }while (checker == true);
 

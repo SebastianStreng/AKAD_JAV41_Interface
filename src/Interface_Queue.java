@@ -3,13 +3,14 @@ import java.util.Queue;
 
 public interface Interface_Queue <E> {
 
-    public void enter( E elm, Queue<Object> queue);
 
-    public E leave (Queue<Object> queue);
+    public void enter( E elm);
 
-    public boolean isEmpty(Queue<Object> queue);
+    public E leave ();
 
-    public int size(Queue<Object> queue);
+    public boolean isEmpty();
 
-    public void clear(Queue<Object> queue);
+    public int size();
+
+    public void clear();
 }

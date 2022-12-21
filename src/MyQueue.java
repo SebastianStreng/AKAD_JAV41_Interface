@@ -1,42 +1,40 @@
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static java.lang.System.in;
 
-public class MyQueue implements Interface_Queue{
+public class MyQueue <E> implements Interface_Queue{
 
-    @Override
-    public void enter(Object elm, Queue queue) {
-        queue.add(elm);
-    }
+    Queue<E> queue = new ConcurrentLinkedQueue<>();
 
-    @Override
-    public Object leave(Queue queue) {
-
-        return queue.poll(); //returns null if empty
-    }
-
-    @Override
-    public boolean isEmpty(Queue queue) {
-        if (queue.isEmpty()){
-            return true;
-        } return false;
-    }
-
-    @Override
-    public int size(Queue queue) {
-        return queue.size();
-    }
-
-    @Override
-    public void clear(Queue queue) {
-        queue.clear();
-    }
-
-    public void printQueue(Queue queue){
-        for(Object elm : queue){
-            System.out.println(elm);
+    public void printQueue(){
+        for (Object o: queue) {
+            System.out.println(o);
         }
     }
+    @Override
+    public void enter(Object elm) {
+        queue.add((E)elm);
+    }
+    @Override
+    public Object leave() {
+        return queue.remove();
+    }
+    @Override
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
 
+    @Override
+    public int size() {
+        return queue.size() ;
+    }
+
+    @Override
+    public void clear() {
+        queue.clear();
+    }
 }
